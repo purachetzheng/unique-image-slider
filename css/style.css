@@ -1,0 +1,161 @@
+
+.container{
+    min-height: 100vh;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slider-wrapper{
+    background-color: white;
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.slider{
+    width: 40%;
+}
+
+.slides{
+    list-style-type: none;
+    display: flex;
+    transform: translateX(-33.3333%);
+}
+
+.slide{
+    width: 33.333333%;
+    padding: 0 0.25rem;
+    cursor: pointer;
+}
+
+.slide img{
+    width: 100%;
+}
+
+.next-btn, .prev-btn{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 80;
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    border : 0;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+.next-btn:hover, .prev-btn:hover{
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.next-btn:disabled, .prev-btn:disabled{
+    cursor: pointer;
+}
+
+.slider-wrapper:hover .slider-btn{
+    opacity: 1;
+}
+  
+.next-btn{
+    right: 10px;
+}
+
+.prev-btn{
+    left: 10px;
+}
+
+.next-btn i, .prev-btn i {
+    font-size: 1.75em;
+    color: rgb(245, 245, 245);
+}
+
+.pagination{
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+    gap: 1rem;
+}
+
+.pagination-bullet{
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: white;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.pagination-bullet:hover[class="pagination-bullet"]{
+    background-color: #d1d5db;
+    transition-duration: 0s;
+}
+
+.pagination-bullet-active{
+    background-color: #F37B00;
+}
+
+.setting-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgrey;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.setting-heading{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.setting-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.setting-list li{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 20rem;
+}
+
+.setting-menu input[type=number] {
+    width: 6rem;
+}
+
+.setting-save{
+    margin-top: 1rem;
+}
+
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    align-items: center;
+    background-color: lightgrey;
+}
+
+.footer div, ul{
+    padding: 0 2rem;
+}
+
+.footer i{
+    font-size: 2rem;
+}
+
+.social-media{
+    display: flex;
+    gap: 1rem;
+}
